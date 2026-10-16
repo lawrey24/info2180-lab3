@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded",function (){
             squares.classList.remove("hover");
         })
         squares.addEventListener("click",function(){
+
+            if (gamestate[index]!= ""){
+                return;
+            }
             gamestate[index] = currentplayer;
             squares.textContent = currentplayer;
             squares.classList.add(currentplayer);
