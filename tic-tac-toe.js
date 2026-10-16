@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded",function (){
    
     squares.forEach((squares,index)=>{
         squares.classList.add("square");
+        squares.addEventListener("mouseenter",function(){
+            squares.classList.add("hover");
+        })
+        squares.addEventListener("mouseleave",function(){
+            squares.classList.remove("hover");
+        })
         squares.addEventListener("click",function(){
             gamestate[index] = currentplayer;
             squares.textContent = currentplayer;
